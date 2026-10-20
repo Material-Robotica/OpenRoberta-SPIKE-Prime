@@ -4,7 +4,7 @@ Guía para programar el **LEGO SPIKE Prime** desde el [Open Roberta Lab](https:/
  
 ## Guía paso a paso
  
-👉 **[Abrir la guía Open Roberta + SPIKE Prime](https://eliizquierdo.github.io/openRoberta-spike/Guia-OpenRoberta-SPIKE.html)**
+👉 **[Abrir la guía Open Roberta + SPIKE Prime](https://material-robotica.github.io/OpenRoberta-SPIKE-Prime/Guia-OpenRoberta-SPIKE.html)**
  
 > Guía hermana para LEGO EV3 con leJOS: [Open Roberta + EV3](https://material-robotica.github.io/openRoberta-ev3/Guia-OpenRoberta-EV3.html)
  
