@@ -1,5 +1,6 @@
 # Open Roberta + LEGO SPIKE Prime (Pybricks)
- Guía para programar el **LEGO SPIKE Prime** desde el [Open Roberta Lab](https://lab.open-roberta.org) con **Windows 11**, usando el firmware **Pybricks** y la conexión **Bluetooth del navegador**.
+ 
+Guía para programar el **LEGO SPIKE Prime** desde el [Open Roberta Lab](https://lab.open-roberta.org) con **Windows 11**, usando el firmware **Pybricks** y la conexión **Bluetooth del navegador**.
  
 ## Guía paso a paso
  
@@ -14,17 +15,17 @@
 - Navegador **Google Chrome** o **Microsoft Edge** (Firefox y Safari no tienen Bluetooth web).
 - PC con **Bluetooth** (en PC de escritorio sin Bluetooth: adaptador Bluetooth USB).
 - Cable **USB** del SPIKE Prime, solo para instalar el firmware.
-No hace falta instalar programas, Java ni drivers en la PC: a diferencia del EV3, todo funciona desde el navegador.
+No hace falta instalar programas, Java ni drivers en la PC: todo funciona desde el navegador.
  
 ## Resumen
  
-| | EV3 (leJOS) | SPIKE Prime (Pybricks) |
-|---|---|---|
-| Sistema en el robot | leJOS en la microSD | Firmware **Pybricks** instalado en el hub |
-| Programa puente | Open Roberta Connector | Ninguno: conexión directa desde el navegador |
-| Conexión | Cable USB + driver | **Bluetooth** del navegador |
-| Lenguaje generado | Java | Python (MicroPython) |
-| Tarjeta en el Lab | EV3 leJOS 0.9.1 | **Spike Prime / Robot Inventor / Pybricks** |
+| | SPIKE Prime (Pybricks) |
+|---|---|
+| Sistema en el robot | Firmware **Pybricks** instalado en el hub |
+| Programa puente | Ninguno: conexión directa desde el navegador |
+| Conexión | **Bluetooth** del navegador |
+| Lenguaje generado | Python (MicroPython) |
+| Tarjeta en el Lab | **Spike Prime / Robot Inventor / Pybricks** |
  
 ## Pasos
  
