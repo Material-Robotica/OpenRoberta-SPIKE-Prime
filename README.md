@@ -1,6 +1,5 @@
 # Open Roberta + LEGO SPIKE Prime (Pybricks)
- 
-Guía para programar el LEGO SPIKE Prime desde el Open Roberta Lab con Windows 11, usando el firmware Pybricks y la conexión Bluetooth del navegador.
+ Guía para programar el **LEGO SPIKE Prime** desde el [Open Roberta Lab](https://lab.open-roberta.org) con **Windows 11**, usando el firmware **Pybricks** y la conexión **Bluetooth del navegador**.
  
 ## Guía paso a paso
  
