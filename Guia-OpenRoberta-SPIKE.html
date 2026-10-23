@@ -263,7 +263,7 @@
   </header>
  
   <div class="part"><span class="tag">PARTE A</span><h2>Preparar cada hub</h2></div>
-  <p class="part-sub">Una sola vez por hub. No requiere usuario administrador.</p>
+  <p class="part-sub">Una sola vez por hub. Solo instalar Zadig (A3) requiere usuario administrador, una vez por PC.</p>
   
   <div class="step"><div class="num">A1</div><div class="content"><h2>Revisar los requisitos</h2><ul>
 <li>Navegador <strong>Google Chrome</strong> o <strong>Microsoft Edge</strong>. Firefox y Safari no tienen el Bluetooth web que usan Pybricks y Open Roberta.</li>
@@ -272,16 +272,20 @@
 </ul>
 <p>No hace falta instalar ningún programa ni driver: todo se hace desde el navegador.</p></div></div>
   <div class="step"><div class="num">A2</div><div class="content"><h2>Actualizar el firmware oficial de LEGO (si hace falta)</h2><p>El instalador de Pybricks necesita que el hub tenga la última versión del firmware oficial. Si hace mucho que no se usa con la app de LEGO SPIKE, conectarlo una vez a la app y dejar que se actualice.</p></div></div>
-  <div class="step"><div class="num">A3</div><div class="content"><h2>Instalar el firmware Pybricks en el hub</h2><p>Abrir en Chrome o Edge:</p><div class="term"><div class="term-bar"><span></span><span></span><span></span></div><pre>https://code.pybricks.com</pre></div>
+  <div class="step"><div class="num">A3</div><div class="content"><h2>Instalar el firmware Pybricks v4.0.1 en el hub</h2><p>Se instala la versión <strong>4.0.1</strong> y no la más nueva, porque desde la 4.1.0 el sensor de color no funciona con Open Roberta. Descargar este archivo y <strong>no descomprimirlo</strong>:</p><div class="term"><div class="term-bar"><span></span><span></span><span></span></div><pre>https://github.com/pybricks/pybricks-micropython/releases/download/v4.0.1/pybricks-primehub-v4.0.1.zip</pre></div>
+<p>Abrir en Chrome o Edge <strong>https://code.pybricks.com</strong> y seguir estos pasos:</p>
 <ul>
 <li>Tocar el ícono de <strong>configuración</strong> (engranaje) → <strong>Install Pybricks Firmware</strong>.</li>
-<li>Elegir el hub <strong>SPIKE Prime</strong> y avanzar con <strong>Next</strong> hasta el paso <strong>4 Install</strong>.</li>
-<li>En el paso 4 usar la <strong>Option 1: Quick update</strong> (la primera). Sirve porque el hub ya tiene el firmware oficial actualizado (A2).</li>
-<li><strong>Encender el hub</strong> con el botón central. Tiene que estar encendido antes de conectarlo.</li>
-<li>Conectar el hub por <strong>USB</strong>, tocar <strong>Check for hubs</strong>, elegir en la ventana del navegador el dispositivo <strong>LEGO Technic Large Hub in FS mode</strong> y tocar <strong>Connect</strong>.</li>
-<li>Esperar a que termine: el hub se reinicia solo.</li>
+<li>En el paso <strong>1</strong>, no elegir el hub de la lista: abrir <strong>Advanced</strong> y cargar el <strong>.zip</strong> descargado. Tiene que aparecer <strong>Custom firmware selected</strong> y <strong>Firmware Version: ci-release-101-v4.0.1</strong>.</li>
+<li>Avanzar con <strong>Next</strong>: aceptar las licencias y ponerle un <strong>nombre</strong> al hub.</li>
+<li>En el paso <strong>4 Install</strong>, usar <strong>Update manually</strong>. La <em>Quick update</em> no sirve aquí: siempre instala la versión más nueva e ignora el archivo cargado.</li>
+<li>Poner el hub en <strong>modo actualización</strong>: apagarlo y desconectar el USB, mantener apretado el <strong>botón de Bluetooth</strong>, conectar el USB sin soltarlo y soltar cuando la luz parpadee en <strong>rojo, verde y azul</strong>.</li>
+<li>Elegir el hub en la ventana del navegador, tocar <strong>Connect</strong> y esperar a que termine <strong>sin desconectar el cable</strong>. El hub se reinicia solo.</li>
 </ul>
-<div class="panel"><span class="badge warn">SI NO APARECE EL HUB</span><p style="margin:0">Usar la <strong>Option 2: Manual update</strong> (botón <strong>Update manually</strong>) solo si el hub tiene una versión vieja de Pybricks o del firmware de LEGO, o si su luz ya parpadea en rojo/azul/verde o en rosa. En ese caso, seguir las instrucciones y el video que muestra esa pantalla.</p></div>
+<p>Para comprobar la versión, conectar el hub por Bluetooth en Pybricks y ejecutar este programa. En la consola tiene que aparecer <strong>'4.0.1'</strong>:</p><div class="term"><div class="term-bar"><span></span><span></span><span></span></div><pre>from pybricks import version
+print(version)</pre></div>
+<div class="panel"><span class="badge warn">WINDOWS: SI NO APARECE EL HUB</span><p style="margin:0">Si la luz parpadea en colores pero la ventana dice <strong>No compatible devices found</strong>, falta el controlador USB. Instalarlo <strong>una vez por PC</strong> (pide administrador): descargar <strong>Zadig</strong> de zadig.akeo.ie, con el hub en modo actualización ir a <strong>Options → List All Devices</strong>, elegir <strong>LEGO Technic Large Hub in DFU Mode</strong>, seleccionar <strong>WinUSB</strong> y tocar <strong>Install Driver</strong>. Después repetir <strong>Update manually</strong>.</p></div>
+<div class="panel"><span class="badge warn">NO ACTUALIZAR</span><p style="margin:0">Si Pybricks avisa que hay una versión nueva del firmware, <strong>no aceptarla</strong>: con la 4.1.0 o posterior, los programas de Open Roberta que usan el sensor de color no arrancan.</p></div>
 <div class="panel"><span class="badge opt">REVERSIBLE</span><p style="margin:0">Para volver a usar la app de LEGO SPIKE: en code.pybricks.com → <strong>Restore Official LEGO Firmware</strong>. Mientras tenga Pybricks, el hub <strong>no funciona</strong> con la app oficial.</p></div></div></div>
   <div class="step"><div class="num">A4</div><div class="content"><h2>No emparejar el hub en Windows</h2><p>La conexión Bluetooth la hace siempre <strong>el navegador</strong>. En Windows solo hay que tener el Bluetooth <strong>activado</strong>, pero el hub <strong>no</strong> se agrega desde la configuración.</p>
 <p>Revisar en <strong>Configuración → Bluetooth y dispositivos</strong>: si aparece el hub (por ejemplo <em>Mouse (SPIKE Prime)</em> o con otro nombre), entrar y tocar <strong>Quitar</strong>. Si Windows lo tiene emparejado, el navegador no puede usarlo.</p></div></div>
@@ -323,8 +327,10 @@
     <ul><li>El hub está tomado por otra pestaña (Pybricks u otro Lab) o por Windows. Cerrar las otras pestañas, quitar el hub de Windows (A4) y apagar y encender el hub.</li></ul>
     <h3>El hub no aparece en la lista del navegador</h3>
     <ul><li>Probablemente no tiene Pybricks instalado (con el firmware de LEGO no aparece): repetir A3. También verificar que la PC tenga Bluetooth.</li></ul>
-    <h3>Al instalar Pybricks, "Check for hubs" no encuentra el hub</h3>
-    <ul><li>Verificar que el hub esté <strong>encendido</strong> y conectado por USB, y volver a tocar <strong>Check for hubs</strong>. Si sigue sin aparecer, usar <strong>Option 2: Manual update</strong> (A3).</li></ul>
+    <h3>Al instalar Pybricks, la ventana dice "No compatible devices found"</h3>
+    <ul><li>Revisar que la luz de Bluetooth parpadee en <strong>rojo, verde y azul</strong> (modo actualización) y que el cable USB transmita datos. Si la luz parpadea y aun así no aparece, instalar el controlador con <strong>Zadig</strong> (A3).</li></ul>
+    <h3>El programa no hace nada en el hub y usa el sensor de color</h3>
+    <ul><li>El hub tiene Pybricks <strong>4.1.0 o posterior</strong>, que admite como máximo 8 colores, y el código del Lab pide 9. Comprobar la versión e instalar la <strong>4.0.1</strong> (A3). Mientras tanto, quitar el sensor de color de la configuración.</li></ul>
     <h3>La imagen o el texto no se ven en el hub</h3>
     <ul><li>Agregar un <strong>wait ms</strong> al final del programa (B3).</li></ul>
     <h3>En los bloques de Pybricks aparece un triángulo de aviso</h3>
@@ -335,3 +341,4 @@
 </div>
 </body>
 </html>
+ 
